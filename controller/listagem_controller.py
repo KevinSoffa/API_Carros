@@ -1,11 +1,10 @@
 from sqlalchemy.ext.asyncio import AsyncSession
 from models.dao import get_session
 from models.dto import CriarDTO
-from .router import router
 from sqlmodel import select
-from typing import List
 from fastapi import Depends
-
+from .router import router
+from typing import List
 
 
 
