@@ -8,7 +8,6 @@ from typing import List
 from uuid import UUID
 
 
-
 @router.get('/{carro_id}', response_model=CriarDTO, status_code=status.HTTP_200_OK)
 async def detalhe(carro_id:UUID, db:AsyncSession=Depends(get_session)):
     async with db as session:

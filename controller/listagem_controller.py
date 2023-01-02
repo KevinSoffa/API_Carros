@@ -7,7 +7,6 @@ from .router import router
 from typing import List
 
 
-
 @router.get('/', response_model=List[CriarDTO])
 async def listagem(db: AsyncSession = Depends(get_session)):
     async with db as session:

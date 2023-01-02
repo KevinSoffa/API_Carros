@@ -7,7 +7,6 @@ from .router import router
 from uuid import UUID
 
 
-
 @router.put('/{carro_id}', status_code=status.HTTP_202_ACCEPTED, response_model=CriarDTO)
 async def atualizar(carro_id:UUID, carro_dto: CriarDTO, db:AsyncSession=Depends(get_session)):
     async with db as session:

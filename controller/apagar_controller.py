@@ -12,8 +12,6 @@ from fastapi import (
 )
 
 
-
-
 @router.delete('/{carro_id}', status_code=status.HTTP_204_NO_CONTENT)
 async def apagar(carro_id: UUID, db: AsyncSession = Depends(get_session)):
     async with db as session:
